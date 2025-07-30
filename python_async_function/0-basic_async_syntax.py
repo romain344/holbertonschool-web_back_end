@@ -1,9 +1,10 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """défine la fonction async wait_random"""
 
 
 import random
 import asyncio
+
 
 async def wait_random(max_delay):
     """choissi un temps dattante entre 0 et 10"""
