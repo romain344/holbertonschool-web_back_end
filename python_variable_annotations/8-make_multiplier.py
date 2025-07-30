@@ -1,8 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Définit la fonction make_multiplier"""
 
 
 from typing import Callable
+
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """Retourne une fonction qui multiplie une valeur par multiplier"""
