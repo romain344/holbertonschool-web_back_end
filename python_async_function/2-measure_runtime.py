@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""execute la fonction"""
 
 
 import time
