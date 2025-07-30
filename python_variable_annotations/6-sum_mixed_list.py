@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""définie la fonction sum_mixed_list"""
+"""Définit la fonction sum_mixed_list"""
 
 
-def sum_mixed_list(mxd_lst: list[float | int]) -> float:
-    """renvoie la somme des éléments d'une liste mixte"""
-    return sum(mxd_lst)
+from typing import List, Union
+
+
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
+    """Renvoie la somme des éléments d'une liste mixte"""
+    return float(sum(mxd_lst))
