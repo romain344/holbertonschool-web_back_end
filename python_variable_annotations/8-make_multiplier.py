@@ -9,6 +9,6 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """Retourne une fonction qui multiplie une valeur par multiplier"""
     
     def multiplier_function(value: float) -> float:
+        """retoune aux multiplierur """
         return value * multiplier
-    
     return multiplier_function
