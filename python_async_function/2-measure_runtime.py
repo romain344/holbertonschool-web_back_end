@@ -1,25 +1,15 @@
-#!/usr/bin/python3
-"""Définit la coroutine async wait_n"""
+#!/usr/bin/env python3
 
 
+import time
 import asyncio
-from typing import List
-wait_random = __import__('0-basic_async_syntax').wait_random
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
-    """calcule le temps moiyent pour executer une fonction"""
-    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
-    results = await asyncio.gather(*tasks)
-    sorted_delays: List[float] = []
-    for delay in results:
-        inserted = False
-        for i in range(len(sorted_delays)):
-            if delay < sorted_delays[i]:
-                sorted_delays.insert(i, delay)
-                inserted = True
-                break
-        if not inserted:
-            sorted_delays.append(delay)
-
-    return sorted_delays
+def measure_time(n: int, max_delay: int) -> float:
+    """Mesure le temps total pour exécuter wait_n"""
+    start = time.perf_counter()
+    asyncio.run(wait_n(n, max_delay))
+    end = time.perf_counter()
+    total_time = end - start
+    return total_time / n
