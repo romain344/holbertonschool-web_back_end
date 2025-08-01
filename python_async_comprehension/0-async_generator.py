@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-""""défine la fonction"""
-
-
 import asyncio
 import random
-
 
 async def async_generator():
     """génère des nombres aléatoires"""
