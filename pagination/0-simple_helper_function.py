@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """execute la fonction index_page"""
 
-
 from typing import Tuple
 
 
