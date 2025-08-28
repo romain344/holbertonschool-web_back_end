@@ -1,4 +1,4 @@
-function groceriesList() {
+export default function groceriesList() {
     return [
         'Apples', 10,
         'Tomatoes', 10,
